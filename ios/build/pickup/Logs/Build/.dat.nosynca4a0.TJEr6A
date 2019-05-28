@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>790F1A68-72C2-4DEB-BC4A-3FF0F28FEA29</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>790F1A68-72C2-4DEB-BC4A-3FF0F28FEA29.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>pickup project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>pickup</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project pickup with scheme pickup and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>580504736.437608</real>
+			<key>timeStoppedRecording</key>
+			<real>580504737.83105099</real>
+			<key>title</key>
+			<string>Building project pickup with scheme pickup and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>790F1A68-72C2-4DEB-BC4A-3FF0F28FEA29</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
