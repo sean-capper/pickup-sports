@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
 import { Image, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { USER_KEY } from '../config';
+import { Auth } from 'aws-amplify';
 
 
 class HomeScreen extends Component {
@@ -14,9 +15,11 @@ class HomeScreen extends Component {
         password: '',
     };
 
+
+    
     logout = async () => {
         try {
-            await AsyncStorage.removeItem(USER_KEY)
+            await Auth.signOut()
             this.props.navigation.navigate('Auth');
         } catch (err) {
             alert('error signing out...: ' + err)

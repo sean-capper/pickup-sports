@@ -10,6 +10,7 @@ const LoginInput = props => {
                     style={styles.inputField} 
                     placeholder="Username" 
                     placeholderTextColor='#fff'
+                    autoCapitalize="none"
                     onChangeText={props.onUsernameChangeText}
                 />
             </View>
@@ -19,6 +20,7 @@ const LoginInput = props => {
                     style={styles.inputField} 
                     placeholder="Password" 
                     placeholderTextColor='#fff'
+                    autoCapitalize="none"
                     secureTextEntry={true}
                     onChangeText={props.onPasswordChangeText}
                 />
@@ -63,6 +65,7 @@ const styles = StyleSheet.create({
         flex: 1,
         textAlign: 'left',
         color: '#fff',
+        height: '100%',
     },
     sectionStyle: {
         flexDirection: 'row',

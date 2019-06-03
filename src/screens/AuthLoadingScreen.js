@@ -6,32 +6,50 @@ import {
   View,
 } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
+import { Auth } from 'aws-amplify';
 
 
 class AuthLoadingScreen extends Component {
-  constructor(props) {
-    super(props);
-    this._bootstrapAsync();
+  state = {
+    userToken: null
   }
 
-  // Fetch the token from storage then navigate to our appropriate place
-  _bootstrapAsync = async () => {
-    const userToken = await AsyncStorage.getItem('USER_KEY');
+  constructor(props) {
+    super(props);
+  }
 
-    // This will switch to the App screen or Auth screen and this loading
-    // screen will be unmounted and thrown away.
-    this.props.navigation.navigate(userToken ? 'App' : 'Auth');
+  async componentDidMount() {
+    await this.loadApp();
   };
 
-  // Render any loading content that you like here
+  loadApp = async () => {
+    await Auth.currentAuthenticatedUser()
+    .then(user => {
+      this.setState({ userToken: user.signInUserSession.accessToken.jwtToken });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+    this.props.navigation.navigate(this.state.userToken ? 'App' : 'Auth')
+  };
+
   render() {
     return (
-      <View>
-        <ActivityIndicator />
-        <StatusBar barStyle="default" />
+      <View style={styles.container}>
+        <ActivityIndicator size="large" color="#fff" />
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+      flex: 1,
+      borderColor: '#fff',
+      backgroundColor: "#03A9F4",
+      alignItems: 'center',
+      justifyContent: 'center',
+  },
+});
 
 export default AuthLoadingScreen;

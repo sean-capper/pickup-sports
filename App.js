@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
-// import LoginScreen from './src/screens/LoginScreen';
-// import SignupScreen from './src/screens/SignupScreen';
+import Amplify from 'aws-amplify';
+import awsmobile from './aws-exports';
+
 import {HomeScreen, LoginScreen, SignupScreen, AuthLoadingScreen } from './src/screens';
+
+Amplify.configure(awsmobile);
 
 const AppStack = createStackNavigator({
   Home: {screen: HomeScreen},

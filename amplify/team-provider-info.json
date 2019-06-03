@@ -1,0 +1,19 @@
+{
+    "pickupenv": {
+        "awscloudformation": {
+            "AuthRoleName": "pickup-pickupenv-20190528010018-authRole",
+            "UnauthRoleArn": "arn:aws:iam::179578730453:role/pickup-pickupenv-20190528010018-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::179578730453:role/pickup-pickupenv-20190528010018-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "pickup-pickupenv-20190528010018-deployment",
+            "UnauthRoleName": "pickup-pickupenv-20190528010018-unauthRole",
+            "StackName": "pickup-pickupenv-20190528010018",
+            "StackId": "arn:aws:cloudformation:us-east-1:179578730453:stack/pickup-pickupenv-20190528010018/7d6f5a60-8105-11e9-8de0-0e27f3a268d6"
+        },
+        "categories": {
+            "auth": {
+                "pickup443baefe": {}
+            }
+        }
+    }
+}

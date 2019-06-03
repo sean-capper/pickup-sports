@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>22E25E5A-EAA0-40E6-A346-256897119F97</key>
+		<key>201015E6-CED2-4015-B96D-6370CACD70B2</key>
 		<dict>
 			<key>className</key>
 			<string>IDECommandLineBuildLog</string>
@@ -15,11 +15,11 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>22E25E5A-EAA0-40E6-A346-256897119F97.xcactivitylog</string>
+			<string>201015E6-CED2-4015-B96D-6370CACD70B2.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>S</string>
+				<string>W</string>
 			</dict>
 			<key>schemeIdentifier-containerName</key>
 			<string>pickup project</string>
@@ -30,13 +30,45 @@
 			<key>signature</key>
 			<string>Building project pickup with scheme pickup and configuration Debug</string>
 			<key>timeStartedRecording</key>
-			<real>580704249.01688302</real>
+			<real>580939892.57183695</real>
 			<key>timeStoppedRecording</key>
-			<real>580704263.86869097</real>
+			<real>580939893.50820601</real>
 			<key>title</key>
 			<string>Building project pickup with scheme pickup and configuration Debug</string>
 			<key>uniqueIdentifier</key>
-			<string>22E25E5A-EAA0-40E6-A346-256897119F97</string>
+			<string>201015E6-CED2-4015-B96D-6370CACD70B2</string>
+		</dict>
+		<key>25711C21-D431-4216-BF5B-0F970F1D75D5</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>25711C21-D431-4216-BF5B-0F970F1D75D5.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>pickup project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>pickup</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project pickup with scheme pickup and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>581287244.257568</real>
+			<key>timeStoppedRecording</key>
+			<real>581287255.75146699</real>
+			<key>title</key>
+			<string>Building project pickup with scheme pickup and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>25711C21-D431-4216-BF5B-0F970F1D75D5</string>
 		</dict>
 	</dict>
 </dict>

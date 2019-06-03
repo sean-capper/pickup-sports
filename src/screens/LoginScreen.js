@@ -1,34 +1,40 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Image, StyleSheet, View, TouchableOpacity, Text, TextInput } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import LoginInput from '../components/LoginInput';
+import { Auth } from 'aws-amplify';
 
-import {USER_KEY} from '../config';
+const initialState = {
+    username: '',
+    password: '',
+    user: {},
+}
 
 class LoginScreen extends Component {
     static navigationOptions = {
         header: null,
     };
 
-    state = { 
+    state = {
         username: '',
         password: '',
+        user: {},
     };
 
     onChangeText = (key, value) => {
         this.setState({ [key]: value })
-    }
+    };
 
     loginHandler = async () => {
         const { username, password } = this.state
-        try { 
-            // login with provider
-            const user = await AsyncStorage.setItem(USER_KEY, username);
-            alert('user successfully signed in:' + user);
-            this.props.navigation.navigate('App');
-        } catch (err) {
-            alert('error: ' + err);
-        }
+        await Auth.signIn(username, password)
+        .then(user => {
+            this.setState({ user });
+            this.props.navigation.navigate('AuthLoading');
+        })
+        .catch(err => {
+            alert("Error: " + err.message)
+        })
     };
 
     render() {
@@ -67,6 +73,17 @@ const styles = StyleSheet.create({
         borderColor: '#000',
         marginTop: '20%',
     },
+    input: {
+        width: 350,
+        fontSize: 18,
+        fontWeight: '500',
+        height: 55,
+        backgroundColor: '#42A5F5',
+        margin: 10,
+        color: 'white',
+        padding: 8,
+        borderRadius: 14
+      },
 });
 
 export default LoginScreen;

@@ -1,0 +1,8 @@
+{
+	"auth": {
+		"pickup443baefe": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

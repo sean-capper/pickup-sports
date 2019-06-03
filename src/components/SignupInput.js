@@ -5,33 +5,47 @@ const SignupInput = props => {
     return (
         <View style={styles.inputGroup}>
             <View style={styles.sectionStyle}>
-                <Image style={styles.iconStyle} source={require('../assets/images/account_icon.png')} />
+                <Image style={styles.usernameIcon} source={require('../assets/images/account_icon.png')} />
                 <TextInput 
                     style={styles.inputField} 
                     placeholder="Username" 
                     placeholderTextColor='#fff'
+                    autoCapitalize="none"
                     onChangeText={props.onUsernameChangeText}
                 />
             </View>
             <View style={styles.sectionStyle}>
-                <Image style={styles.iconStyle} source={require('../assets/images/lock.png')} />
+                <Image style={styles.lockIcon} source={require('../assets/images/lock.png')} />
                 <TextInput 
                     style={styles.inputField} 
                     placeholder="Password" 
                     placeholderTextColor='#fff'
                     secureTextEntry={true}
+                    autoCapitalize="none"
                     onChangeText={props.onPasswordChangeText}
                 />
             </View>
-            <View style={styles.sectionStyle}>
-                <Image style={styles.iconStyle} source={require('../assets/images/lock.png')} />
+            {/* <View style={styles.sectionStyle}>
+                <Image style={styles.lockIcon} source={require('../assets/images/lock.png')} />
                 <TextInput 
                     style={styles.inputField} 
                     placeholder="Retype Password" 
                     placeholderTextColor='#fff'
                     secureTextEntry={true}
                 />
+            </View> */}
+            <View style={styles.sectionStyle}>
+                <Image style={styles.emailIcon} source={require('../assets/images/email_icon.png')} />
+                <TextInput 
+                    style={styles.inputField} 
+                    placeholder="Email" 
+                    placeholderTextColor='#fff'
+                    autoCapitalize="none"
+                    keyboardType="email-address"
+                    onChangeText={props.onEmailChangeText}
+                />
             </View>
+
             <TouchableOpacity style={styles.signupButton} onPress={props.signupHandler}>
                 <Text style={styles.signupText}>Sign up</Text>
             </TouchableOpacity>
@@ -72,6 +86,7 @@ const styles = StyleSheet.create({
         flex: 1,
         textAlign: 'left',
         color: '#fff',
+        height: '100%',
     },
     sectionStyle: {
         flexDirection: 'row',
@@ -83,12 +98,39 @@ const styles = StyleSheet.create({
         width: '100%',
         marginTop: 10,
     },
-    iconStyle: {
+    usernameIcon: {
         padding: 10,
         marginRight: 10,
         marginLeft: 10,
         height: 22,
-        width: 18,
+        width: 16,
+        resizeMode: 'stretch',
+        alignItems: 'center',
+    },
+    lockIcon: {
+        padding: 10,
+        marginRight: 10,
+        marginLeft: 10,
+        height: 22,
+        width: 16,
+        resizeMode: 'stretch',
+        alignItems: 'center',
+    },
+    emailIcon: {
+        padding: 10,
+        marginRight: 10,
+        marginLeft: 10,
+        height: 16,
+        width: 22,
+        resizeMode: 'stretch',
+        alignItems: 'center',
+    },
+    phoneIcon: {
+        padding: 10,
+        marginRight: 10,
+        marginLeft: 10,
+        height: 24,
+        width: 8,
         resizeMode: 'stretch',
         alignItems: 'center',
     },
